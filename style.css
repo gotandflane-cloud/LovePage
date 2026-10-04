@@ -1,0 +1,457 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+
+  font-family: Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at 20% 20%, #ff7aa8 0%, transparent 30%),
+    radial-gradient(circle at 80% 80%, #8e1748 0%, transparent 35%),
+    linear-gradient(135deg, #210815, #4b102b, #76183e);
+
+  color: white;
+
+  overflow-x: hidden;
+}
+.love-page {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 50px 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.heart {
+  font-size: 80px;
+
+  margin-bottom: 15px;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+  margin: 0 0 15px;
+
+  font-size: 38px;
+
+  font-weight: 700;
+}
+
+p {
+  margin: 0 auto 30px;
+
+  max-width: 320px;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.main-button {
+  padding: 16px 35px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: white;
+
+  color: #8e1748;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+.main-button:hover {
+  transform: scale(1.08);
+
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+.hearts {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.hearts span {
+  position: absolute;
+
+  bottom: -50px;
+
+  font-size: 30px;
+
+  opacity: 0.5;
+
+  animation: float 8s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+  left: 90%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .love-card {
+    padding: 45px 25px;
+  }
+  .heart {
+    font-size: 70px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 17px;
+  }
+}
+
+.second-screen {
+  display: none;
+}
+
+.small-heart {
+  font-size: 65px;
+
+  margin-bottom: 10px;
+
+  color: #ff8fb9;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+.small-title {
+  margin-bottom: 20px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.second-screen h2 {
+  margin-bottom: 20px;
+
+  font-size: 42px;
+
+  line-height: 1.1;
+}
+
+.second-text {
+  max-width: 300px;
+
+  margin: 0 auto 30px;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.third-screen {
+  display: none;
+  text-align: center;
+}
+
+.third-screen h2 {
+  font-size: 58px;
+  line-height: 1;
+  margin: 10px 0 25px;
+}
+
+.third-screen h2 span {
+  color: #ff8fb9;
+}
+
+.confession-heart {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 72px;
+  color: #ff7eae;
+
+  text-shadow: 0 0 25px rgba(255, 91, 155, 0.55);
+
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+.confession-text {
+  max-width: 350px;
+  margin: 0 auto;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.little-divider {
+  width: 45px;
+  height: 1px;
+
+  margin: 28px auto;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.question-intro {
+  max-width: 300px;
+  margin: 0 auto 28px;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.question-button {
+  margin-top: 4px;
+}
+
+.love-question {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.love-question-card {
+  padding: 40px 25px;
+}
+
+.love-question-card h1 {
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+.love-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.love-buttons button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background: #ff4f81;
+  color: white;
+}
+
+.no-btn {
+  background: #222;
+  color: white;
+  touch-action: none;
+  transition: transform 160ms ease-out;
+}
+
+.final-screen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 24px;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 20% 20%, #ff7aa8 0%, transparent 30%),
+    radial-gradient(circle at 80% 80%, #8e1748 0%, transparent 35%),
+    linear-gradient(135deg, #210815, #4b102b, #76183e);
+}
+
+.final-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 45px 30px;
+  animation: finalAppear 1s ease;
+}
+
+.final-hearts {
+  font-size: 42px;
+  margin-bottom: 25px;
+  animation: heartBeat 1.5s infinite;
+}
+
+.final-card h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.final-main-text {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.final-text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.final-love {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+@keyframes finalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@media (max-width: 600px) {
+  .love-page {
+    padding: 36px 22px;
+  }
+
+  .second-screen h2 {
+    font-size: 34px;
+  }
+
+  .third-screen h2 {
+    font-size: 46px;
+  }
+
+  .love-question-card {
+    padding: 24px 8px;
+  }
+
+  .love-question-card h1 {
+    font-size: 30px;
+  }
+
+  .love-buttons {
+    gap: 12px;
+  }
+
+  .love-buttons button {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .final-card {
+    padding: 32px 8px;
+  }
+
+  .final-card h1 {
+    font-size: 34px;
+  }
+
+  .final-main-text {
+    font-size: 20px;
+  }
+
+  .final-love {
+    font-size: 19px;
+  }
+}
